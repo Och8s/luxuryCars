@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Cars</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Luxury Cars</h1>
+  </header>
+  <main>
+    <!-- Contenedor común para video y audio -->
+    <div class="container-media">
+      <div class="container-video">
+        <video controls width="100%" loop> 
+          <source src="media/anuncioCoche.mp4" type="video/mp4">
+          <track src="media/captions/anuncio.vtt" label="català" kind="captions" srclang="cat" default>
+          El teu navegador no admet vídeo HTML5. 
+        </video> 
+      </div>
+      <div class="container-audio">   
+        <audio id="audioPlayer" controls style="width: 100%;"> 
+          El teu navegador no admet àudio HTML5. 
+        </audio> 
+      </div>
+    </div>
+    <div class="presentacio">
+      <h3>La qualitat, el luxe i el rendiment al teu abast</h3>
+      <p>Sigui quin sigui el teu somni automobilístic, des d'un sofisticat berlina de luxe fins a un esportiu amb prestacions increïbles, tenim el vehicle perfecte per a tu. Ens assegurem que cada cotxe que oferim compleixi els més alts estàndards de qualitat i rendiment, perquè puguis gaudir de cada quilòmetre recorregut.</p>
+    </div>
+    <h2>Les millors marques</h2>
+    <div class="container-image">
+      <section class="galeria">
+        <div class="image-container">
+          <img src="imatges/imatge1.jpg" alt="Descripció 1">
+          <div class="buttons">
+            <button class="zoom-in">Ampliar</button>
+            <button class="zoom-out">Reduir</button>
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="imatges/imatge2.jpeg" alt="Descripció 2">
+          <div class="buttons">
+            <button class="zoom-in">Ampliar</button>
+            <button class="zoom-out">Reduir</button>
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="imatges/imatge3.jpeg" alt="Descripció 3">
+          <div class="buttons">
+            <button class="zoom-in">Ampliar</button>
+            <button class="zoom-out">Reduir</button>
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="imatges/imatge4.jpg" alt="Descripció 3">
+          <div class="buttons">
+            <button class="zoom-in">Ampliar</button>
+            <button class="zoom-out">Reduir</button>
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="imatges/imatge5.jpg" alt="Descripció 3">
+          <div class="buttons">
+            <button class="zoom-in">Ampliar</button>
+            <button class="zoom-out">Reduir</button>
+          </div>
+        </div>
+      </section>
+      
+    </div>
+  </main>
+  <footer>
+    <p>© 2025 Luxury Cars. Tots els drets reservats. Conduint innovació a cada kilometre.</p>
+  </footer>
+  <script>
+    const images = document.querySelectorAll('.galeria img');
+
+document.querySelectorAll('.zoom-in').forEach((button, index) => {
+  button.addEventListener('click', () => {
+    images[index].style.transform = 'scale(1.2)';
+  });
+});
+
+document.querySelectorAll('.zoom-out').forEach((button, index) => {
+  button.addEventListener('click', () => {
+    images[index].style.transform = 'scale(1)';
+  });
+});
+
+    // Playlist d'àudio
+    const playlist = [
+      "media/guitar-loop.mp3", // Afegim una segona pista
+      "media/last-days.mp3"
+
+    ];
+
+    let currentTrack = 0;
+    const audioPlayer = document.getElementById("audioPlayer");
+
+    // Carrega la primera pista
+    audioPlayer.src = playlist[currentTrack];
+
+    // Quan acaba la pista, passa a la següent
+    audioPlayer.addEventListener("ended", function () {
+      currentTrack = (currentTrack + 1) % playlist.length; // Cicle infinit
+      audioPlayer.src = playlist[currentTrack];
+      audioPlayer.play();
+
+
+    });
+  </script>
+</body>
+</html>

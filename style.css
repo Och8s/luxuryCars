@@ -1,0 +1,167 @@
+body {
+    background: linear-gradient(135deg, #3e3f42, #2c2d31, #2b2c2d);
+    color: #222;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  /* Contenedor para video y audio */
+  .container-media {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    gap: 5px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    justify-content: center; /* Centra los elementos dentro del contenedor */
+  }
+  .container-video, .container-audio {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    width: 70%; /* Video ocupa 70% */
+  }
+  .container-video {
+    width: 80%;
+  }
+  
+  .container-audio {
+    width: 20%;
+  }
+  
+  video, audio {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+  }
+  
+  .container-image {
+    background: linear-gradient(rgba(40, 42, 42, 0.1), rgba(51, 55, 59, 0.1));
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 5px;
+    margin-bottom: 80px;
+  }
+  
+  .galeria {
+    display: flex;
+    flex-wrap: nowrap;  /* Asegura que las imágenes estén en una sola línea */
+    gap: 5px;  /* Espacio entre las imágenes */
+    justify-content: center;  /* Centra las imágenes horizontalmente */
+  }
+  
+  .galeria img {
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  .galeria img:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: fixed;
+    bottom: 0;
+  }
+  
+  h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif, cursive;
+    font-size: 25px;
+    background: linear-gradient(135deg, #606868, #bdc1c1, #d8e7e5);
+    -webkit-background-clip: text;  /* Recorta el fondo al texto */
+    color: transparent;  /* Hace que el texto sea transparente para que se vea el gradiente */
+  }
+  
+  h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif, cursive;
+    font-size: 60px;
+    background: linear-gradient(135deg, #96960f, #e1c744, #8b6e2f);
+    -webkit-background-clip: text;  /* Recorta el fondo al texto */
+    color: transparent;  /* Hace que el texto sea transparente para que se vea el gradiente */
+  }
+  
+  h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif, cursive;
+    font-size: 35px;
+    background: linear-gradient(135deg, #817989, #87bcd3, #8f8dce);
+    -webkit-background-clip: text;  /* Recorta el fondo al texto */
+    color: transparent;  /* Hace que el texto sea transparente para que se vea el gradiente */
+  }
+  #audioPlayer::-webkit-media-controls-panel {
+    background: linear-gradient(to bottom, rgba(44, 57, 62, 0.7), rgb(36, 41, 46)); /* Gradiente oscuro */
+    border-radius: 10px;
+  }
+  body {
+    background: linear-gradient(135deg, #3e3f42, #2c2d31, #2b2c2d);
+    color: #222;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+
+  .buttons {
+    display: flex;
+    gap: 5px;
+  }
+
+  .buttons button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .zoom-in {
+    background: linear-gradient(135deg, #394239, #637964, #495a4a); /* Gradiente desde verde oscuro a verde claro */
+    color: white;
+  }
+  
+  .zoom-in:hover {
+    background: linear-gradient(135deg, #81bc84, #6a7f6a, #698c6a); /* Invertir el gradiente al hacer hover */
+  }
+  
+  .zoom-out {
+    background: linear-gradient(135deg, #341515, #c48787, #9f4b4a); /* Gradiente desde marrón oscuro a marrón claro */
+    color: white;
+  }
+  
+  .zoom-out:hover {
+    background: linear-gradient(135deg, #c48787, #a38583, #b35b5b); /* Invertir el gradiente al hacer hover */
+  }
+  
+
+  p{
+    color: #eef2f4;
+    font-size: 19px;
+  }
+  
+  .presentacio {
+    width: 50%;
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0 auto; /* El padding se puede ajustar si es necesario */
+    line-height: 1.5; /* Ajusta la altura de línea para mejorar la legibilidad */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    margin-bottom: 100px;
+  }
+  
